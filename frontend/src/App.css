@@ -447,6 +447,7 @@
     grid-template-columns: 1.5fr 2fr;
     grid-gap: 30px;
     min-height: 200px;
+    width: 100%;
 }
 
 .incomeAndExpense, .allTransactionsExpense, .allTransactionsIncome, .allTransactions .leftSide {
@@ -824,7 +825,7 @@
     justify-content: center;
 }
 
-.innerDiv .realIcon, .successPassword .icon .realIcon, .successTransaction .icon .realIcon,.successEdit .icon .realIcon {
+.innerDiv .realIcon, .successPassword .icon .realIcon, .successTransaction .icon .realIcon, .successEdit .icon .realIcon {
     color: red;
     font-size: 5em;
 }
@@ -859,7 +860,7 @@
     background-color: #FB494A
 }
 
-.innerDiv .goodResponse .realIcon, .passwordWrapper .successPassword .icon .realIcon, .successTransaction .icon .realIcon,.successEdit .icon .realIcon {
+.innerDiv .goodResponse .realIcon, .passwordWrapper .successPassword .icon .realIcon, .successTransaction .icon .realIcon, .successEdit .icon .realIcon {
     color: #3CC361
 }
 
@@ -949,18 +950,19 @@
     padding: 50px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
-.successEdit{
+
+.successEdit {
     background: white;
     padding: 50px;
 }
 
-.successTransaction .middle,.successEdit .middle {
+.successTransaction .middle, .successEdit .middle {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.successTransaction .middle .button,.successEdit .middle .button {
+.successTransaction .middle .button, .successEdit .middle .button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -978,7 +980,7 @@
     height: 100%;
 }
 
-.successTransaction p,.successEdit p {
+.successTransaction p, .successEdit p {
     font-size: 20px;
 }
 
@@ -1237,23 +1239,24 @@
     align-items: center;
 }
 
-.allTransactions .righSide .form{
+.allTransactions .righSide .form {
     padding: 1em 3em 2.5em 3em;
     background: rgba(255, 255, 255, 0.3);
     box-shadow: 0 5px 45px rgba(0, 0, 0, 0.5);
 }
 
-.editWrapper .innerDiv .formWrapper .form{
+.editWrapper .innerDiv .formWrapper .form {
     padding: 1em 3em 2.5em 3em;
     width: 100%;
 }
-.allTransactions .righSide .formWrapper .form form, .editWrapper .innerDiv .formWrapper .form form{
+
+.allTransactions .righSide .formWrapper .form form, .editWrapper .innerDiv .formWrapper .form form {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.allTransactions .righSide .formWrapper .form form input,.editWrapper .innerDiv .formWrapper .form input{
+.allTransactions .righSide .formWrapper .form form input, .editWrapper .innerDiv .formWrapper .form input {
     margin-bottom: 20px;
     padding: 10px;
     outline: none;
@@ -1261,21 +1264,21 @@
     border: 1px solid black;
 }
 
-.allTransactions .righSide .formWrapper .form form span,.editWrapper .innerDiv .formWrapper .form span {
+.allTransactions .righSide .formWrapper .form form span, .editWrapper .innerDiv .formWrapper .form span {
     margin-top: -20px;
     margin-bottom: 10px;
     color: red;
     font-size: 15px;
 }
 
-.allTransactions .righSide .formWrapper .form form h3,.editWrapper .innerDiv .formWrapper .form h3 {
+.allTransactions .righSide .formWrapper .form form h3, .editWrapper .innerDiv .formWrapper .form h3 {
     font-size: 1.5em;
     color: black;
     margin-bottom: 20px;
     font-weight: 500;
 }
 
-.editWrapper .innerDiv{
+.editWrapper .innerDiv {
     min-width: 450px;
 }
 
@@ -1335,16 +1338,13 @@
     font-weight: 600;
 }
 
-.googleLogin span {
-    color: white !important;
-    position: initial !important;
-    font-size: 16px;
-    top: 0 !important;
+.dashBoardWrapper {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.googleLogin button {
-    width: -webkit-fill-available !important;
+.editWrapper{
+    background-image:none
 }

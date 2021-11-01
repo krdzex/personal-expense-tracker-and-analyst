@@ -1,0 +1,1350 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+.App {
+    min-height: 100vh;
+}
+
+.navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: #287bff;
+    border-left: 10px solid #287bff;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    margin-top: 30px;
+}
+
+.navigation ul li.dashBoard {
+    width: 90%;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.navigation ul li:nth-child(1) {
+    pointer-events: none;
+    margin-top: 0px;
+    background-color: white;
+    color: #287bff;
+    width: 90%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.navigation ul li:nth-child(1) a {
+    color: #287bff;
+}
+
+.navigation ul li:nth-child(1) a .title {
+    left: 20px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.navigation ul li:nth-child(1) a .icon {
+    left: 25px;
+    font-size: 20px;
+    top: 5px;
+    transition: 0.5s;
+}
+
+.navigation.hide ul li:nth-child(1) a .icon {
+    left: 0px;
+    transition: 0.5s;
+}
+
+.navigation.hide ul li.showNav .subNav {
+    left: 0px;
+}
+
+.navigation.hide ul li.showNav .subNav .title {
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.navigation.hide ul li.showNav .subNav .title {
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.navigation.hide ul li .title {
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.navigation ul li.transactionWrapper.showNav a:first-of-type, .navigation ul li.statisticWrapper.showNav a:first-of-type, .navigation ul li.profileWrapper.showNav a:first-of-type {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.navigation ul li.transactionWrapper.showNav .subNav a:first-of-type, .navigation ul li.statisticWrapper.showNav .subNav a:first-of-type, .navigation ul li.profileWrapper.showNav .subNav a:first-of-type {
+    background-color: inherit;
+}
+
+.navigation ul li.transactionWrapper.showNav .subNav #active::after {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    content: "";
+    top: 0px;
+    right: -64px;
+    transform: rotate(45deg);
+    background-color: white;
+    pointer-events: none;
+}
+
+.navigation ul li:nth-child(2) {
+    margin-top: 100px;
+}
+
+.navigation ul li a, .navigation ul li .deleteProfile, .signOut {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+.signOut {
+    width: 50px;
+    height: 40px;
+    color: white;
+    background-color: #287bff;
+    border: 2px solid #287bff;
+    border-radius: 10px;
+    transition: 0.5s;
+    position: relative;
+}
+
+.signOut .icon {
+    right: 4px;
+    height: 40px !important;
+    line-height: 62px !important;
+}
+
+.signOut .text {
+    display: none !important;
+    height: 40px !important;
+    line-height: 40px !important;
+}
+
+.signOut:hover {
+    background-color: white;
+    cursor: pointer;
+    color: #287bff;
+    width: 150px;
+    overflow: hidden;
+}
+
+.signOut:hover .text {
+    display: block !important;
+}
+
+.navigation ul li a .icon, .navigation ul li .deleteProfile .icon, .signOut .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 80px;
+    text-align: center;
+    z-index: 1;
+}
+
+.navigation ul li a .icon .realIcon, .navigation ul li .deleteProfile .icon .realIcon, .signOut .icon .realIcon {
+    font-size: 2em;
+}
+
+.navigation ul li a .title, .navigation ul li .deleteProfile .title, .signOut .text {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.navigation ul .active a::before {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    content: "";
+    top: 0px;
+    right: -64px;
+    transform: rotate(45deg);
+    background-color: white;
+    pointer-events: none;
+}
+
+.navigation ul li.transactionWrapper, .navigation ul li.statisticWrapper, .navigation ul li.showNav, .navigation ul li.profileWrapper, .navigation ul li.showNav {
+    width: 90%;
+    background: rgba(0, 0, 0, 0.3);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation ul li.transactionWrapper .subNav, .navigation ul li.statisticWrapper .subNav, .navigation ul li.profileWrapper .subNav {
+    max-height: 0px;
+}
+
+.navigation ul li.transactionWrapper, .navigation ul li.statisticWrapper, .navigation ul li.profileWrapper {
+    height: 60px;
+}
+
+.navigation ul li.transactionWrapper .subNav, .navigation ul li.statisticWrapper .subNav, .navigation ul li.profileWrapper .subNav {
+    position: relative;
+    left: 15px;
+}
+
+.navigation.hide ul li.transactionWrapper .subNav, .navigation.hide ul li.statisticWrapper .subNav, .navigation.hide ul li.profileWrapper .subNav {
+    position: relative;
+    left: 0px;
+}
+
+.navigation ul li.statisticWrapper.showNav, .navigation ul li.profileWrapper.showNav {
+    height: 240px;
+}
+
+.navigation ul li.transactionWrapper.showNav {
+    height: 300px;
+}
+
+.navigation ul li.showNav .subNav, .navigation ul li.showNav .subNav {
+    max-height: 100%;
+    transition: 0.5s;
+}
+
+.navigation ul li.showNav .subNav {
+    position: relative;
+    left: 15px;
+    transition: 0.5s;
+}
+
+.mainWrapper {
+    position: absolute;
+    width: calc(100% - 310px);
+    left: 310px;
+    min-height: 100%;
+    transition: 0.5s;
+}
+
+.headerWrapper {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.headerLeftSide {
+    position: relative;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.navigation.hide {
+    width: 65px;
+}
+
+.mainWrapper.hide {
+    width: calc(100% - 75px);
+    left: 75px;
+}
+
+.headerRightSide {
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.headerRightSide .currencyChoose {
+    margin-right: 100px;
+    background-color: #287bff;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 160px;
+    position: relative;
+}
+
+.currencyChoose .icon {
+    position: absolute;
+    top: 12px;
+    font-size: 18px;
+    right: 5px;
+    color: black;
+}
+
+.currencyChoose .icon .realIcon {
+    color: white;
+    cursor: pointer;
+}
+
+.headerRightSide .currencyChoose .dropList.active {
+    height: 100px;
+}
+
+.headerRightSide .currencyChoose .dropList {
+    transition: 0.5s;
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    background: #287bff;
+    padding: 5px;
+    border-radius: 10px;
+    height: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropList .iconCurrency {
+    font-size: 23px;
+}
+
+.headerRightSide .currencyChoose .dropList div {
+    border: 2px solid #287bff;
+    cursor: pointer;
+    margin-bottom: 5px;
+    background: white;
+    color: black;
+    font-weight: 600;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.midSection {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.boxesWrapper {
+    margin-top: 50px;
+    position: relative;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.topSide {
+    margin-top: 50px;
+    position: relative;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+
+.bottomSide {
+    margin-top: 50px;
+    position: relative;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+
+.topSide .table {
+    padding: 20px;
+    max-height: 470px;
+    overflow: auto;
+}
+
+.topSide .chart {
+    padding: 20px;
+}
+
+.boxesWrapper .box, .allTransactions .righSide .box {
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 30px;
+    transition: 0.3s;
+    border: 2px solid #287bff;
+}
+
+.boxesWrapper .box .numbers, .allTransactions .righSide .box .numbers {
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5em;
+    color: #287bff;
+}
+
+.boxesWrapper .box .cardName, .allTransactions .righSide .box .cardName {
+    color: #999;
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.boxesWrapper .box .boxIcon, .allTransactions .righSide .box .boxIcon {
+    color: #999;
+    font-size: 3.5em;
+    margin-top: 5px;
+}
+
+.boxesWrapper .box:hover, .allTransactions .righSide .box:hover {
+    background-color: #287bff;
+}
+
+.righSide {
+    margin-top: 0px !important;
+    align-content: space-evenly;
+}
+
+.boxesWrapper .box:hover .boxIcon, .boxesWrapper .box:hover .cardName, .boxesWrapper .box:hover .numbers, .allTransactions .righSide .box:hover .boxIcon, .allTransactions .righSide .box:hover .cardName, .allTransactions .righSide .box:hover .numbers {
+    color: white;
+}
+
+.topLeft {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 700;
+    top: 15px;
+    left: 10px;
+}
+
+.dashBoardBottom {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    grid-gap: 30px;
+    min-height: 200px;
+}
+
+.incomeAndExpense, .allTransactionsExpense, .allTransactionsIncome, .allTransactions .leftSide {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    min-height: 200px;
+}
+
+.allTransactionsExpense .chart, .allTransactionsExpense .table, .allTransactionsIncome .table, .allTransactions .leftSide .chart {
+    min-height: 200px;
+}
+
+.allTransactionsExpense .chart, .allTransactionsIncome .chart, .allTransactions .leftSide .chart {
+    position: sticky;
+    top: 75px;
+}
+
+.allTransactionsExpense, .allTransactions, .bottomSide .rightSide, .bottomSide .leftSide {
+    min-height: 200px;
+}
+
+.allTransactions {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.bottomSide .leftSide {
+    padding: 20px;
+}
+
+.dashBoardBottom .dashBoardChart, .dashBoardBottom .dashBoardTable, .incomeAndExpense .allTransactionsExpense, .incomeAndExpense .allTransactionsIncome, .allTransactions, .statisticsDialyWrapper .topSide, .bottomSide .rightSide, .bottomSide .leftSide {
+    position: relative;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 20px;
+}
+
+.dashBoardBottom .dashBoardTable {
+    max-height: 660px;
+    overflow: auto;
+}
+
+.allTransactionsExpense, .allTransactionsIncome, .allTransactions .leftSide {
+    max-height: 400px;
+    overflow: auto;
+}
+
+.cart {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.circle {
+    max-width: 700px !important;
+    max-height: 600px !important;
+    padding-bottom: 20px;
+}
+
+.dashBoardTable, .allTransactionsExpense, .allTransactionsIncome, .allTransactions .leftSide {
+    position: relative;
+    min-height: 500px;
+    padding: 0px 20px 20px 20px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.dashBoardTable table, .allTransactionsExpense .table table, .allTransactionsIncome .table table, .allTransactions .leftSide .table table, .statisticsDialyWrapper .topSide .table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dashBoardTable table thead, .allTransactionsExpense .table table thead, .allTransactionsIncome .table table thead, .allTransactions .leftSide .table table thead {
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.dashBoardTable table thead td, .allTransactionsExpense .table table thead td, .allTransactionsIncome .table table thead td, .allTransactions .leftSide .table table thead td, .statisticsDialyWrapper .topSide .table table thead td {
+    font-weight: 700;
+}
+
+.dashBoardTable table thead tr, .allTransactionsExpense .table table thead tr, .allTransactionsIncome .table table thead tr, .allTransactions .leftSide .table table thead tr, .statisticsDialyWrapper .topSide .table table thead tr {
+    height: 50px;
+}
+
+.dashBoardTable table tbody tr, .allTransactionsExpense .table table tbody tr, .allTransactionsIncome .table table tbody tr, .allTransactions .leftSide .table table tbody tr, .statisticsDialyWrapper .topSide .table table tbody tr {
+    transition: 0.2s;
+    height: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dashBoardTable table tbody tr:hover, .allTransactionsExpense .table table tbody tr:hover, .allTransactionsIncome .table table tbody tr:hover, .allTransactions .leftSide .table table tbody tr:hover, .statisticsDialyWrapper .topSide .table table tbody tr:hover {
+    background-color: #287bff;
+    color: white;
+}
+
+.dashBoardTable table tbody tr td .expense {
+    color: #f43648;
+    background: white;
+    border-radius: 2px;
+    padding: 2px;
+    margin-right: 5px;
+}
+
+.dashBoardTable table tbody tr td .income {
+    color: #3CC361;
+    background: white;
+    border-radius: 2px;
+    padding: 2px;
+    margin-right: 5px;
+}
+
+.dashBoardTable table tr:last-child {
+    border-bottom: none;
+}
+
+.dashBoardTable table tr td:last-child, .allTransactionsExpense .table table tr td:last-child, .allTransactionsIncome .table table tr td:last-child, .allTransactions .leftSide .table table tr td:last-child, .statisticsDialyWrapper .topSide .table table tr td:last-child {
+    text-align: end;
+}
+
+.dashBoardTable table tr td:nth-child(2), .allTransactionsExpense .table table tr td:nth-child(2), .allTransactionsIncome .table table tr td:nth-child(2), .allTransactions .leftSide .table table tr td:nth-child(2), .statisticsDialyWrapper .topSide .table table tr td:nth-child(2) {
+    text-align: center;
+}
+
+.dashBoardTable table tr td:nth-child(3), .allTransactionsExpense .table table tr td:nth-child(3), .allTransactionsIncome .table table tr td:nth-child(3), .allTransactions .leftSide .table table tr td:nth-child(3) {
+    text-align: center;
+}
+
+.transactionsDialyWrapper, .transactionsWeeklyWrapper, .transactionsYearlyWrapper, .statisticsDialyWrapper, .statisticsWeeklyWrapper, .statisticsYearlyWrapper {
+    margin-top: 50px;
+}
+
+.allTransactionsExpense .table table tr td div, .allTransactionsIncome .table table tr td div, .allTransactions .leftSide .table table tr td div {
+    display: flex;
+    justify-content: space-around;
+    font-size: 23px;
+}
+
+.allTransactionsExpense .table table tr td div #delete, .allTransactionsIncome .table table tr td div #delete, .allTransactions .leftSide .table table tr td div #delete {
+    color: red;
+    cursor: pointer;
+}
+
+.allTransactionsExpense .table table tr td div #edit, .allTransactionsIncome .table table tr td div #edit, .allTransactions .leftSide .table table tr td div #edit {
+    cursor: pointer;
+}
+
+.cart .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.cart .middle p, .chart .middle p {
+    font-size: 15px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.allTransactionsExpense .chart .middle, .allTransactionsIncome .chart .middle, .allTransactions .leftSide .chart .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+.signInWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #03a9f4;
+    transition: 0.5s;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+    transition: 0.5s;
+}
+
+.container.active {
+    height: 600px;
+}
+
+.container.active .blueBg {
+    height: 500px;
+}
+
+.blueBg {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 420px;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.blueBg .box {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blueBg .box h2 {
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.blueBg .box button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+}
+
+.formBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.25);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.formBx.active {
+    left: 50%;
+}
+
+.signInWrapper.active {
+    background-color: #f43648;
+}
+
+.formBx .form {
+    position: absolute;
+    left: 0;
+    width: -webkit-fill-available;
+    padding: 50px;
+    transition: 0.2s;
+}
+
+.formBx .form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formBx .form form h3 {
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.formBx .form form input, .innerDiv .oldPassword input {
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid black;
+}
+
+.oldPassword input {
+    margin-bottom: 0px !important;
+    width: -webkit-fill-available;
+}
+
+.formBx .signinForm {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.25s;
+}
+
+.formBx.active .signinForm {
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0s;
+}
+
+.formBx .signupForm {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.formBx.active .signupForm {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.25s;
+}
+
+.formBx .form form input[type="submit"] {
+    background-color: #03a9f4;
+    border: none;
+    color: white;
+    max-width: 100px;
+    cursor: pointer;
+}
+
+.formBx .form.afterFirst form input.error, .passwordWrapper .passwordForm.afterFirst .inputBox input.error, .oldPassword.afterFirst input.error, .allTransactions .righSide .formWrapper .form.afterFirst form input.error, .editWrapper .innerDiv .formWrapper .form.afterFirst form input.error {
+    border: 3px solid #e74c3c;
+}
+
+.formBx .form.afterFirst form input.success, .passwordWrapper .passwordForm.afterFirst .inputBox input.success, .oldPassword.afterFirst input.success, .allTransactions .righSide .formWrapper .form.afterFirst form input.success, .editWrapper .innerDiv .formWrapper .form.afterFirst form input.success {
+    border: 3px solid #2ecc71;
+}
+
+.formBx .form span {
+    position: relative;
+    top: -20px;
+    height: 10px;
+    color: red;
+}
+
+.deleteProfile {
+    cursor: pointer;
+}
+
+.deleteWrapper, .editWrapper {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(50, 50, 50, 0.5));
+}
+
+.innerDiv {
+    background-color: white;
+    padding: 3em 2em;
+    border-radius: 5px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+}
+
+.innerDiv .realIcon, .successPassword .icon .realIcon, .successTransaction .icon .realIcon,.successEdit .icon .realIcon {
+    color: red;
+    font-size: 5em;
+}
+
+.innerDiv h2, .successPassword {
+    text-align: center;
+    margin-top: 0;
+}
+
+.innerDiv .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.innerDiv .buttons button {
+    font-size: 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    margin: 0px 20px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.innerDiv .buttons #cancel {
+    background-color: #ACB5BD
+}
+
+.innerDiv .buttons #confirm {
+    background-color: #FB494A
+}
+
+.innerDiv .goodResponse .realIcon, .passwordWrapper .successPassword .icon .realIcon, .successTransaction .icon .realIcon,.successEdit .icon .realIcon {
+    color: #3CC361
+}
+
+.innerDiv .badResponse .buttons button {
+    background: #FB494A;
+    min-width: 8em;
+}
+
+.innerDiv .goodResponse .buttons, .innerDiv .badResponse .buttons {
+    justify-content: center;
+}
+
+.innerDiv .goodResponse .buttons button {
+    background-color: #3CC361;
+    min-width: 8em;
+}
+
+.innerDiv .goodResponse, .innerDiv .badResponse, .innerDiv .oldPassword {
+    font-size: 20px;
+}
+
+.innerDiv .goodResponse h2, .innerDiv .badResponse h2, .innerDiv .oldPassword h2 {
+    margin-top: 10px;
+}
+
+.innerDiv .goodResponse, .innerDiv .badResponse, .innerDiv .oldPassword {
+    padding: 0em 2em;
+}
+
+.passwordWrapper, .editWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.passwordWrapper .passwordForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 3cm;
+}
+
+.passwordWrapper .passwordForm .inputBox.last {
+    margin-bottom: 2.5cm;
+}
+
+.passwordWrapper .passwordForm .inputBox input {
+    margin-bottom: 40px;
+    padding: 10px;
+    outline: none;
+    font-size: 18px;
+    border: 1px solid black;
+    position: absolute;
+    width: -webkit-fill-available;
+    background: transparent;
+}
+
+.passwordWrapper .passwordForm .inputBox span {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    padding: 10px;
+    font-size: 18px;
+    transition: 0.5s;
+    font-weight: 300;
+    pointer-events: none;
+}
+
+.passwordWrapper .passwordForm .inputBox p {
+    position: absolute;
+    top: 40px;
+    color: red;
+}
+
+.passwordWrapper .passwordForm .inputBox input:focus~span, .passwordWrapper .passwordForm .inputBox.active span {
+    transform: translateX(-10px) translateY(-35px);
+}
+
+.passwordWrapper .passwordForm, .passwordWrapper .successPassword, .editWrapper .editForm {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    padding: 50px;
+    width: 350px;
+}
+
+.successTransaction {
+    background: white;
+    padding: 50px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.successEdit{
+    background: white;
+    padding: 50px;
+}
+
+.successTransaction .middle,.successEdit .middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.successTransaction .middle .button,.successEdit .middle .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border: 2px solid black;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.formWrapper.succes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.successTransaction p,.successEdit p {
+    font-size: 20px;
+}
+
+.passwordWrapper .passwordForm form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.passwordWrapper .passwordForm form h3, .editWrapper .editForm h2 {
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 30px;
+    font-weight: 500;
+    border-left: 8px solid #287bff;
+    padding: 0px 15px;
+}
+
+.passwordWrapper .passwordForm .buttons a {
+    background-color: #ACB5BD;
+    border: none;
+    color: white;
+    max-width: 110px;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+}
+
+.passwordWrapper .passwordForm .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.passwordWrapper .passwordForm .buttons input[type="submit"] {
+    background-color: #3CC361;
+    border: none;
+    color: white;
+    max-width: 120px;
+    cursor: pointer;
+    margin-bottom: 0px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0;
+}
+
+.successPassword .circle {
+    border: 5px solid black;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 0;
+    font-weight: 600;
+}
+
+.successPassword .middle, .innerDiv .oldPassword .okBtn {
+    display: flex;
+    justify-content: center;
+}
+
+.innerDiv .delete p {
+    text-align: center;
+}
+
+.innerDiv .oldPassword .okBtn {
+    margin-top: 20px;
+}
+
+.innerDiv .oldPassword .okBtn button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px solid #2ecc71;
+    color: #2ecc71;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.innerDiv .oldPassword form p {
+    font-size: 17px;
+    margin: 0;
+    color: red;
+    display: none;
+}
+
+.innerDiv .oldPassword.afterFirst form p {
+    display: block;
+}
+
+.firstFormFirstName, .firstFormLastName, .firstFormNickName {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.firstFormFirstName h3, .firstFormLastName h3, .firstFormNickName h3 {
+    flex: 0 0 120px;
+}
+
+.firstFormFirstName p, .firstFormLastName p, .firstFormNickName p {
+    display: flex;
+    justify-content: center;
+}
+
+.firstFormFirstName #edit, .firstFormLastName #edit, .firstFormNickName #edit {
+    color: #287bff;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.firstFormFirstName .edit, .firstFormLastName .edit, .firstFormNickName .edit {
+    width: 100%;
+}
+
+.firstFormFirstName .editIcon, .firstFormLastName .editIcon, .firstFormNickName .editIcon {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 50px;
+}
+
+.firstFormFirstName input, .firstFormLastName input, .firstFormNickName input {
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid black;
+    background: transparent;
+    width: 90%;
+}
+
+.activeEdit span {
+    color: red;
+}
+
+.activeEdit p, .edit input, .hideIcon {
+    display: none;
+}
+
+.edit p, .activeEdit input {
+    display: block;
+}
+
+.editForm .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+
+.editForm.active .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.buttons button#cancel {
+    background-color: #ACB5BD;
+}
+
+.buttons button#change {
+    background-color: #3CC361;
+}
+
+.editWrapper.afterFirst .editForm.active .firstFormFirstName input.success, .editWrapper.afterFirst .editForm.active .firstFormLastName input.success, .editWrapper.afterFirst .editForm.active .firstFormNickName input.success {
+    border: 3px solid #3CC361;
+}
+
+.editWrapper.afterFirst .editForm.active .firstFormFirstName input.error, .editWrapper.afterFirst .editForm.active .firstFormLastName input.error, .editWrapper.afterFirst .editForm.active .firstFormNickName input.error {
+    border: 3px solid #f43648;
+}
+
+.oldPassword .closeBtn {
+    width: 50px;
+    height: 50px;
+    background-color: #363D4E;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    border-radius: 50%;
+    transition: transform 600ms;
+}
+
+.innerDiv {
+    position: relative;
+}
+
+.oldPassword .closeBtn:hover {
+    background: #3E465A;
+    cursor: pointer;
+}
+
+.oldPassword .closeBtn::before {
+    background: #FFFFFF;
+    content: '';
+    cursor: pointer;
+    display: block;
+    height: 2px;
+    position: absolute;
+    width: 20px;
+    transform: translate(-50%, -50%)rotate( 45deg);
+    top: 50%;
+    left: 50%;
+}
+
+.oldPassword .closeBtn::after {
+    background: #FFFFFF;
+    content: '';
+    cursor: pointer;
+    display: block;
+    height: 2px;
+    position: absolute;
+    width: 20px;
+    transform: translate(-50%, -50%)rotate(-45deg);
+    top: 50%;
+    left: 50%;
+}
+
+.allTransactions .righSide {
+    transition: 0.5s;
+}
+
+.allTransactions .righSide.expense {
+    background: #e74c3c;
+    border-radius: 20px;
+}
+
+.allTransactions .righSide.income {
+    background: #3CC361;
+    border-radius: 20px;
+}
+
+.allTransactions .righSide .formWrapper, .editWrapper .innerDiv .formWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.allTransactions .righSide .form{
+    padding: 1em 3em 2.5em 3em;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.5);
+}
+
+.editWrapper .innerDiv .formWrapper .form{
+    padding: 1em 3em 2.5em 3em;
+    width: 100%;
+}
+.allTransactions .righSide .formWrapper .form form, .editWrapper .innerDiv .formWrapper .form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.allTransactions .righSide .formWrapper .form form input,.editWrapper .innerDiv .formWrapper .form input{
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid black;
+}
+
+.allTransactions .righSide .formWrapper .form form span,.editWrapper .innerDiv .formWrapper .form span {
+    margin-top: -20px;
+    margin-bottom: 10px;
+    color: red;
+    font-size: 15px;
+}
+
+.allTransactions .righSide .formWrapper .form form h3,.editWrapper .innerDiv .formWrapper .form h3 {
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.editWrapper .innerDiv{
+    min-width: 450px;
+}
+
+.allTransactions .righSide .incomeExpenseButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.allTransactions .righSide .incomeExpenseButtons .income, .allTransactions .righSide .incomeExpenseButtons .expense {
+    margin: 0px 10px;
+    font-weight: 700;
+    color: #0e3742;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.allTransactions .righSide.income .incomeExpenseButtons .income, .allTransactions .righSide.expense .incomeExpenseButtons .expense {
+    color: #fff;
+    text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 40px #000, 0 0 80px #000, 0 0 120px #000;
+}
+
+.currencyWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.currencyWrapper div {
+    width: 50px;
+    height: 23px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.currencyWrapper div.active {
+    background: white;
+    border: 3px solid #3CC361;
+}
+
+.editWrapper .innerDiv .form form .currencyWrapper div.active {
+    border: 3px solid black;
+}
+
+.currencyWrapper .dollar, .currencyWrapper .euro {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.googleLogin span {
+    color: white !important;
+    position: initial !important;
+    font-size: 16px;
+    top: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.googleLogin button {
+    width: -webkit-fill-available !important;
+}

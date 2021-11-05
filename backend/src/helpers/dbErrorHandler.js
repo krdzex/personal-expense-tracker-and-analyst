@@ -22,8 +22,8 @@ const getUniqueErrorMessage = (err) => {
     try {
         let fieldName = err.message.substring(err.message.lastIndexOf(".$") + 2,
             err.message.lastIndexOf("_1"));
-            let name = fieldName.substring(fieldName.lastIndexOf(" ") + 1,fieldName.length)
-        output = {[name]: "This value already exist"}
+        let name = fieldName.substring(fieldName.lastIndexOf(" ") + 1, fieldName.length)
+        output = { [name]: "This value already exist" }
     } catch (ex) {
         output = "Unique field already exists"
     }

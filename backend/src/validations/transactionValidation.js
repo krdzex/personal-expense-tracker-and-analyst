@@ -10,7 +10,7 @@ module.exports = function validateTransaction(data) {
     if (Validator.isEmpty(data.title)) {
         errors.title = "Title is required";
     }
-    if (!Validator.matches(data.title, /^[a-zA-Z0-9]*$/)) {
+    if (!Validator.matches(data.title, /^[a-zA-Z0-9\s]*$/)) {
         errors.title = "No special characters allowed";
     }
     if (Validator.isEmpty(data.amount)) {

@@ -1345,6 +1345,74 @@
     align-items: center;
 }
 
-.editWrapper{
-    background-image:none
+.editWrapper {
+    background-image: none
+}
+
+@media (max-width: 991px) {
+    .container {
+        max-width: 400px;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .blueBg {
+        top: 0;
+        height: 100%;
+    }
+    .formBx {
+        width: 100%;
+        height: 500px;
+        top: 0;
+        box-shadow: none;
+    }
+    .blueBg .box {
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 10px;
+    }
+    .box.signin {
+        top: 0;
+    }
+    .formBx.active {
+        left: 0;
+        top: 150px;
+        height: 650px;
+    }
+    .navigation {
+        left: -310px;
+    }
+    .mainWrapper {
+        width: 100%;
+        left: 0;
+    }
+}
+
+@media (max-width: 1600px) {
+    .dashBoardBottom,.allTransactions,.incomeAndExpense,.statisticsDialyWrapper .topSide, .bottomSide {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: initial;
+    }
+    .dashBoardWrapper{
+        height: 100%;
+    }
+
+    .navigation.hide{
+        width: 300px;
+        left: 0;
+    }
+    .mainWrapper.hide{
+        left: 310px;
+    }
+    .navigation.hide ul li .title{
+        opacity: 1;
+    }
+    .navigation.hide ul li.showNav .subNav .title{
+        opacity: 1;
+    }
+    .headerRightSide .currencyChoose{
+        margin-right: 20px
+    }
 }
